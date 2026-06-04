@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Powered Gesture System</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=League+Script&family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    height:100vh;
+    background: linear-gradient(120deg,#141e30,#243b55);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    overflow:hidden;
+}
+
+/* Subtle background glow */
+body::before{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    background:radial-gradient(circle,rgba(0,212,255,0.3),transparent 70%);
+    filter:blur(120px);
+    z-index:0;
+}
+
+header{
+    position:absolute;
+    top:50px;
+    text-align:center;
+    width:100%;
+}
+
+header h1{
+    font-size:42px;
+    font-family:'Roboto Mono', monospace;
+    font-weight:500;
+    letter-spacing:1px;
+    line-height:1.2;
+}
+
+.hero{
+    text-align:center;
+    z-index:1;
+}
+
+.hero h2{
+    font-size:22px;
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+.hero p{
+    max-width:600px;
+    margin:0 auto 50px auto;
+    font-size:18px;
+    color:#ffffff;
+}
+
+.buttons{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+}
+
+button{
+    padding:16px 45px;
+    font-size:16px;
+    font-weight:600;
+    border-radius:50px;
+    border:none;
+    cursor:pointer;
+    transition:all 0.35s ease;
+}
+
+.air-btn{
+    background:linear-gradient(135deg,#00f5a0,#00d9f5);
+    color:#111;
+    box-shadow:0 10px 25px rgba(0,217,245,0.4);
+}
+
+.air-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(0,217,245,0.6);
+}
+
+.gesture-btn{
+    background:linear-gradient(135deg,#00f5a0,#00d9f5);
+    color:#111;
+    box-shadow:0 10px 25px rgba(0,217,245,0.4);
+}
+
+.gesture-btn:hover{
+    background:#00d9f5;
+    color:#111;
+    transform:translateY(-5px);
+}
+
+footer{
+    position:absolute;
+    bottom:25px;
+    font-size:14px;
+    color:#aaaaaa;
+}
+
+@media(max-width:768px){
+    .hero h2{font-size:32px;}
+    header h1{font-size:22px;}
+    .buttons{flex-direction:column;gap:20px;}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Mathematical Computation through<br>Hand Gesture</h1>
+</header>
+
+<div class="hero">
+    <h2>AI Powered Gesture System</h2>
+    <p>Interact with mathematics using intuitive hand movements. Choose between air writing or gesture-based calculation to begin your experience.</p>
+
+    <div class="buttons">
+        <button class="air-btn" onclick="location.href='/airwriting'">Start Air Writing</button>
+        <button class="gesture-btn" onclick="location.href='/gesture'">Start Gesture Calculation</button>
+    </div>
+</div>
+
+<footer>
+    © Built by Athul vs, Aswin Vijayan, Adharsh Joseph, Aswin p pillai
+</footer>
+
+</body>
+</html>
